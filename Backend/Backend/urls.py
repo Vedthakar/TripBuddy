@@ -18,4 +18,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('gemini/', include("gemi_photo_filtering.urls")),
+    path('iternary/', include("iternary.urls")),
 ]
