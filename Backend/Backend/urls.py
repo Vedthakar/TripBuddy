@@ -14,11 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-from Backend import gemi_photo_filtering
-
+from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('gemini/', gemi_photo_filtering.urls),
+    path('gemini/', include("gemi_photo_filtering.urls")),
 ]
